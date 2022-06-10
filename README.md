@@ -8,17 +8,18 @@
 <br>DO NOT USE IT WITHOUT PRIOR AUTHORIZATION!
 <br><br><i>Regarding the damage caused and the simplicity of exploitation, I hope Microsoft will fix it</i>
 </code></pre>
-</div> 
-
-***Core concept:*** path traversal vulnerability in Microsoft's Diagcab technology (`msdt`) that could lead to remote code execution.
-
-You can find the full advisory in the [blog post](https://medium.com/@radimre83/the-trouble-with-microsofts-troubleshooters-6e32fc80b8bd)
-
-The vulnerability has been reported for **2 years** (by [@irsl](https://github.com/irsl)) and still has **no fix**!
-
+</div>
 
 * [🧠 Understand it](#how-it-works)
 * [🐾 Run it](#lets-get-it)
+* [📺 Show Me](##-wait-and-see)
+
+***Core concept:*** path traversal vulnerability in Microsoft's Diagcab technology (`msdt`) that could lead to remote code execution.<br>
+You can find the full advisory in the [blog post](https://medium.com/@radimre83/the-trouble-with-microsofts-troubleshooters-6e32fc80b8bd)<br>
+The vulnerability has been reported for **2 years** (by [@irsl](https://github.com/irsl)) and still has **no fix**!
+
+
+
 
 ## How it works?
 
