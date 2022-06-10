@@ -23,7 +23,7 @@ The vulnerability has been reported for **2 years** (by [@irsl](https://github.c
 
 ## How it works?
 
-The Proof-of-Concept set up a webdav server hosting a malicious `.diagcab` file that will perform a path transversal to write a malicious executable in `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`. Writing an executable in this folder will execute it each time the user start the windows machine, this is called ***Boot Logon Autostart Execution***.
+The Proof-of-Concept sets up a webdav server hosting a malicious `.diagcab` file that will perform a path transversal to write a malicious executable in `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`. Writing an executable in this folder will execute it each time the user start the windows machine, this is called ***Boot Logon Autostart Execution***.
 
 So, basically what we need is:
 * webDAV server
@@ -37,7 +37,7 @@ So, basically what we need is:
 *(💡 use `Content-type: application/octet-stream`response header to make the Browser automaticaly downloading the file when browsing the url)*
 
 2. The victim click on the file download (could easily/accidentaly happen by just clicking on the browser download folder)
-3. The cab file loads the webdav malicious executable -> ***(path transversal)** downloaded in Start up menu
+3. The cab file loads the webdav malicious executable -> ***(path transversal)*** downloaded in Start up menu
 4. The user restart his device -> ***(RCE)***
 
 ## Let's get it
