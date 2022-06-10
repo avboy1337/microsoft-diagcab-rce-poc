@@ -2,7 +2,9 @@
 <h1> Dogwalk Proof-of-Concept🐾</h1>
 <pre><code>
 <h><strong>🚨 Disclaimer 🚨</strong></h4>
-<br>The PoC enables an attacker to be able to obtain <strong>Remote Code Injection</strong> on a Windows victim device. The goal of this repo is to make a PoC even more usable than the <a href=https://github.com/irsl/microsoft-diagcab-rce-poc>initial repo</a>.
+
+<br><br>The PoC enables an attacker to be able to obtain <strong>Remote Code Injection</strong> on a Windows victim device.
+<br>The goal of this repo is to make a PoC even more usable than the <a href=https://github.com/irsl/microsoft-diagcab-rce-poc>initial repo</a>.
 <br>DO NOT USE IT WITHOUT PRIOR AUTHORIZATION!
 <br><br><i>Regarding the damage caused and the simplicity of exploitation, I hope Microsoft will fix it</i>
 </code></pre>
@@ -12,7 +14,11 @@
 
 You can find the full advisory in the [blog post](https://medium.com/@radimre83/the-trouble-with-microsofts-troubleshooters-6e32fc80b8bd)
 
-The vulnerability has been reported for **2 years** (by [@irsl](https://github.com/irsl) and still has **no fix**!
+The vulnerability has been reported for **2 years** (by [@irsl](https://github.com/irsl)) and still has **no fix**!
+
+
+* [🧠 Understand it](#how-it-works)
+* [🐾 Run it](#lets-get-it)
 
 ## How it works?
 
