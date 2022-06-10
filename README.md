@@ -60,7 +60,7 @@ cabarc.exe n hotfix895214.diagcab custom.diagcfg
 
 ### 🏗️ Set up the server
 
-Put the executable you want to transfer on victim machine within `./webdav/malicious` folder... *(Here use the classic `calc.exe`)*
+Put the executable you want to transfer on victim machine within `./webdav/malicious` folder... *(Here we use the classic `calc.exe`)*
 
 ...And launch the server:
 ```
