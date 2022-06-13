@@ -88,10 +88,11 @@ The malicious `.diagcab` is available at `https://[WEBDAV_URL]/config/hotfix8952
 <details>
 <summary><b>Dogwalk set up</b></summary>
 <div align=center>
-<img src=https://github.com/ariary/Dogwalk-rce-poc/blob/main/img/dogwalk_setup.gif>
+<img src=https://github.com/ariary/Dogwalk-rce-poc/blob/master/img/dogwalk_setup.gif>
 </div>
 </details>
 
+🐾🐾
 
-![demo](https://github.com/ariary/Dogwalk-rce-poc/blob/main/img/dogwalk_exploit.gif)
+![demo](https://github.com/ariary/Dogwalk-rce-poc/blob/master/img/dogwalk_exploit.gif)
 
