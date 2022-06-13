@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 FROM scottyhardy/docker-wine:latest AS builder
 COPY . /run/dogwalk-build
 WORKDIR /run/dogwalk-build
@@ -14,4 +13,4 @@ COPY --from=builder /run/dogwalk-build/hotfix895214.diagcab /run/dogwalk-poc/con
 RUN apk update && apk add perl
 WORKDIR /run/dogwalk-poc
 
-CMD ./diagcab-webdav-poc.pl
+ENTRYPOINT [ "./diagcab-webdav-poc.pl" ] 

@@ -10,7 +10,7 @@ else
   else
     ./build-malicious-diagcfg.sh --url $1
   #   DOCKER_BUILDKIT=0 docker build -t ariary/dogwalk .
-    docker build -t ariary/dogwalk .
-    docker run -it --rm --net host ariary/dogwalk
+    DOCKER_BUILDKIT=1 docker build -t ariary/dogwalk .
+    docker run -it --rm -p 8080:8080 ariary/dogwalk $1
   fi
 fi

