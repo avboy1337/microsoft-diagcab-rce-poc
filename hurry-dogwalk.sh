@@ -5,7 +5,6 @@ if [ $# -lt 1 ];then
 else
   if [[ $1 == "--clean" ]]; then
     ID=$(docker ps -a -q --filter ancestor=ariary/dogwalk --format="{{.ID}}")
-    echo $ID
     IDSTOP=$(docker stop $ID)
     docker rmi -f ariary/dogwalk
   else
