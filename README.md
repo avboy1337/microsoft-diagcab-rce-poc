@@ -12,7 +12,7 @@
 
 * [🧠 Understand it](#how-it-works)
 * [🐾 Run it](#lets-get-it)
-* [📺 Show Me](##-wait-and-see)
+* [📺 Show Me](##%EF%B8%8F-wait-and-see)
 
 ***Core concept:*** path traversal vulnerability in Microsoft's Diagcab technology (`msdt`) that could lead to remote code execution.<br>
 You can find the full advisory in the [blog post](https://medium.com/@radimre83/the-trouble-with-microsofts-troubleshooters-6e32fc80b8bd)<br>
