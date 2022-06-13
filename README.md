@@ -83,7 +83,7 @@ The malicious `.diagcab` is available at `https://[WEBDAV_URL]/config/hotfix8952
 
 <sup>*(💡you can use URL shortener to make it appears less suspicious)*</sup>
 
-### 👁️ Wait and see...
+### 👁️ Wait and see
 
 <details>
 <summary><b>Dogwalk set up</b></summary>
