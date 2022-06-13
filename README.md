@@ -41,6 +41,15 @@ So, basically what we need is:
 
 ## Let's get it
 
+If you are too lazy (or in a hurry) to proceed step-by-steps:
+```shell
+./hurry-dogwalk.sh [WEBDAV_URL]         # need docker
+# Stop the server
+./hurry-dogwalk.sh --clean
+```
+
+Otherwise ↓↓
+
 ### 🔨 Craft the  `.diagcab` file
 
 * `.diagcfg` are simple XML files that hold reference to one or more diagnostic packages and provide meta information about them
